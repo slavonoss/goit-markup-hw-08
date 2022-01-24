@@ -1,0 +1,310 @@
+.hero-section {
+  /* background-color: var(--background-color-second); */
+  max-width: 1600px;
+
+  background-size: cover;
+  background-position: center;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4) 100%, rgba(47, 48, 58, 0.4)),
+    url(../images/overlay.jpg);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.backdrop {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition-property: opacity, visibility;
+    transition-duration: 2000ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .modal-order {
+    width: 528px;
+    /* height: 581px; */
+    background-color: var(--body-background-color);
+    position: absolute;
+    
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    transition-delay: 150ms;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  
+  }
+
+
+.backdrop.is-hidden .modal-order {
+    transform: translate(-50%, -50%) scale(0) rotate(0);
+  }
+  
+  .modal-order-close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    background-color: var(--body-background-color);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .modal-order-close:hover .modal-order-icon {
+    fill: #2196f3;
+  }
+
+  .hero-text {
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    letter-spacing: 0.06em;
+    line-height: 1.3636;
+    text-align: center;
+    color: var(--body-background-color);
+    width: 696px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal-title {
+    margin-bottom: 12px;
+    font-style: normal;
+    font-weight: bold;
+   
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  
+  
+   
+    color: var(--item-detail-item-color);
+  
+  
+  }
+
+
+.modal-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    font-style: normal;
+  font-weight: normal;
+    letter-spacing: 0.01em;
+  
+    color: var(--text-element-color);
+  
+  
+  
+  }
+
+
+
+.modal-input {
+    margin-top: 4px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 40px;
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: transparent;
+  }
+  
+  .modal-icon {
+    position: absolute;
+    display: block;
+    width: 18;
+      height: 18;
+    top: 28px;
+    left: 12px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
+
+.modal-textarea {
+    margin-bottom: 20px;
+  }
+  
+  .inner-textarea {
+    margin-top: 4px;
+    padding: 12px 16px;
+    resize: none;
+  
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    outline: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+
+
+
+.inner-textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  
+  .agreement-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-bottom: 30px;
+  
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+  
+    color: var(--text-element-color);
+  }
+  
+  .agreement-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--item-detail-item-color);
+  
+    border-radius: 2px;
+  }
+
+
+
+.agreement-input:checked + .agreement-checkbox {
+    background-color: var(--liting-color);
+    border-color: var(--liting-color);
+  }
+  
+  .agreement-link {
+    color: var(--liting-color);
+  }
+  
+  .modal-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+  
+    color: #ffffff;
+  
+    border: transparent;
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+
+
+.modal-label:hover .modal-input {
+    border: 1px solid var(--liting-color);
+  }
+  
+  .modal-input:focus {
+    border: 1px solid var(--liting-color);
+  }
+  
+  .modal-input:not(:placeholder-shown) {
+    border: 1px solid var(--liting-color);
+  }
+  
+  .modal-label:hover .modal-icon,
+  .modal-input:focus + .modal-icon,
+  .modal-input:not(:placeholder-shown) + .modal-icon {
+    fill: var(--liting-color);
+  }
+
+
+
+.modal-textarea:hover .inner-textarea {
+    border: 1px solid var(--liting-color);
+  }
+  
+  
+  .inner-textarea:focus{
+    border: 1px solid var(--liting-color);
+  
+  }
+  .inner-textarea:not(:placeholder-shown) {
+    border: 1px solid var(--liting-color);
+  }
+  
+  .container-service-button {
+    text-align: center;
+    padding-bottom: 200px;
+  }
+  .service-order-button {
+    background-color: var(--liting-color);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.875;
+    color: var(--body-background-color);
+    cursor: pointer;
+    padding: 10px 32px;
+    border-radius: 4px;
+    border: none;
+    margin: 0px auto;
+    display: block;
+  }
+
+
+
+

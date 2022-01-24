@@ -1,0 +1,28 @@
+
+
+.what-we-do-image {
+  display: flex;
+  justify-content: space-between;
+}
+.what-we-do-item {
+  position: relative;
+}
+
+.what-we-do-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: var(--body-background-color);
+}
+
+.what-we-do-block {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background: rgba(47, 48, 58, 0.8);
+}
