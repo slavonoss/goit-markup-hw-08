@@ -557,7 +557,7 @@ body {
 }
 
 .backdrop {
-  z-index: 5;
+  z-index: 55;
   position: fixed;
   top: 0;
   left: 0;
@@ -581,7 +581,7 @@ body {
 }
 
 .modal-order {
-  width: 450px;
+  max-width: 450px;
   /* height: 581px; */
   background-color: var(--body-background-color);
   position: absolute;
@@ -644,7 +644,7 @@ body {
 }
 
 .hero-text {
-  width: 360px;
+  max-width: 360px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -1212,8 +1212,18 @@ body {
   }
 }
 
+.regular-client-item {
+  margin-bottom: 30px;
+}
+
 .regular-client-item:nth-last-child(-n + 1) {
   margin-bottom: 0px;
+}
+
+@media screen and (max-width479) {
+  .regular-client-item {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -1238,6 +1248,12 @@ body {
     margin-right: 0px;
   }
   .regular-client-item:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .regular-client-item {
     margin-bottom: 0px;
   }
 }
