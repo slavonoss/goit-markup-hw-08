@@ -1,8 +1,9 @@
-
-
 .what-we-do-image {
-  display: flex;
-  justify-content: space-between;
+  display: none;
+  @include mq(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .what-we-do-item {
   position: relative;
@@ -25,4 +26,10 @@
   width: 100%;
   position: absolute;
   background: rgba(47, 48, 58, 0.8);
+}
+.section-work {
+  display: none;
+  @include mq(desktop) {
+    display: block;
+  }
 }

@@ -18,6 +18,8 @@ p {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 body {
   font-family: Roboto, 'sans-serif';
@@ -28,20 +30,31 @@ body {
   background-color: var(--body-background-color);
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @include mq(desktop) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 .container {
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
+  // @include mq(mobile) {
+  //   min-width: 480px;
+  // }
+
   @include mq(tablet) {
     max-width: 768px;
   }
+
   @include mq(desktop) {
-    max-width: 1200px;
+    min-width: 1200px;
   }
 }
 
@@ -52,6 +65,7 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
 .section-heading {
   font-style: normal;
   font-weight: bold;
@@ -59,5 +73,10 @@ body {
   line-height: 1.166666;
   color: var(--item-detail-item-color);
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }

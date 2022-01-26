@@ -1,12 +1,22 @@
-
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  @include mq(notDesktop) {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  @include mq(tablet) {
+    justify-content: center;
+  }
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 .filter-item {
   display: block;
   margin-right: 8px;
+  @include mq(notDesktop) {
+    margin-bottom: 15px;
+  }
 }
 .filter-item:last-child {
   margin-right: 0px;
