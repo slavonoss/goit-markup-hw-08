@@ -57,6 +57,60 @@
             >
           </li>
         </ul>
+        <button
+          class="menu-button"
+          data-menu-button
+          type="button"
+          aria-label="кнопка меню"
+          aria-controls="menu-container"
+          aria-expanded="false"
+        >
+          <svg class="mobile-menu-icon" width="40" height="40">
+            <use class="icon-cross" href="./images/symbol-defs.svg#icon-close-black"></use>
+            <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <ul class="mobile-list">
+            <li class="mobile-item">
+              <a href="./index.html" class="mobile-link">Студия</a>
+            </li>
+            <li class="mobile-item">
+              <a href="./portfolio.html" class="mobile-link mobile-link-active">Портфолио</a>
+            </li>
+            <li class="mobile-item">
+              <a href="" class="mobile-link">Контакты</a>
+            </li>
+          </ul>
+          <div class="mobile-modal-wrap">
+            <ul class="mobile-contacts">
+              <li class="mobile-contacts-item">
+                <a class="mobile-contacts-link mobile-contacts-link-active" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-contacts-item">
+                <a class="mobile-contacts-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-socials">
+              <li class="mobile-socials-item">
+                <a class="mobile-socials-link" href="">Instagram</a>
+              </li>
+              <li class="mobile-socials-item">
+                <a class="mobile-socials-link" href="">Twitter</a>
+              </li>
+              <li class="mobile-socials-item">
+                <a class="mobile-socials-link" href="">Facebook</a>
+              </li>
+              <li class="mobile-socials-item">
+                <a class="mobile-socials-link" href="">Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
